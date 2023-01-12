@@ -18,3 +18,16 @@ def subida():
         passageiros += x
         soma += x
         print('Quantidade de passageiros que embarcaram:', x)
+
+def descida():
+    global parada
+    global passageiros
+    x = randint(0, 10)
+    if passageiros == 0:
+        print('Não há nenhum passageiro para desembarcar.')
+    elif passageiros <= x or parada == 20:
+        print('Quantidade de passageiros que desembarcaram:', passageiros)
+        passageiros = 0
+    else:
+        passageiros -= x
+        print('Quantidade de passageiros que desembarcaram:', x)
