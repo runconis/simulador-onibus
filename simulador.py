@@ -31,3 +31,19 @@ def descida():
     else:
         passageiros -= x
         print('Quantidade de passageiros que desembarcaram:', x)
+
+for parada in range(1, 21):
+    print()
+    print('Parada número', parada)
+    if parada == 1:
+        print('Início da linha!')
+        subida()
+    elif parada == 20:
+        print('Fim da linha!')
+        print('Quantidade de passageiros ao chegar na parada:', passageiros)
+        descida()
+        print(f'Foi transportado um total de {soma} passageiros!')
+    else:
+        print('Quantidade de passageiros ao chegar na parada:', passageiros)
+        descida()
+        subida()
